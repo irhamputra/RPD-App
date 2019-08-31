@@ -1,49 +1,51 @@
-// @ts-ignore
 import React from "react";
+import { Text } from "react-native-elements";
 import styled from "styled-components";
-import { ScrollView } from "react-navigation";
-import { AntDesign } from "@expo/vector-icons";
+
+import { StyledView } from "./Survey";
+import { View } from "react-native";
 
 const HeroBox: React.FC = () => {
   return (
-    <ScrollView
-      showsHorizontalScrollIndicator={false}
-      style={{ margin: 10, marginTop: 0 }}
-      horizontal={true}
-    >
-      <StyledBox>
-        <AntDesign name="caretright" size={50} color="white" />
-        <StyledTextBox>Live</StyledTextBox>
-      </StyledBox>
-      <StyledBox>
-        <AntDesign name="caretright" size={50} color="white" />
-        <StyledTextBox>Chatbox</StyledTextBox>
-      </StyledBox>
-      <StyledBox>
-        <AntDesign name="caretright" size={50} color="white" />
-        <StyledTextBox>Programs</StyledTextBox>
-      </StyledBox>
-      <StyledBox>
-        <AntDesign name="caretright" size={50} color="white" />
-        <StyledTextBox>Podcast</StyledTextBox>
-      </StyledBox>
-    </ScrollView>
+    <View>
+      <StyledView>
+        <Text h4 style={{ fontWeight: "bold" }}>
+          Live!
+        </Text>
+      </StyledView>
+      <StyledLiveStreaming>
+        <StyledLogo
+          source={{
+            uri:
+              "https://pbs.twimg.com/profile_images/739559545022885888/rcW635Or_400x400.jpg"
+          }}
+        />
+        <View style={{ width: 200 }}>
+          <Text>Now Airing:</Text>
+          <Text>SSK Raka & SK Abul - Malaysia | Unit Galau Darurat</Text>
+        </View>
+      </StyledLiveStreaming>
+    </View>
   );
 };
 
-const StyledBox = styled.View`
-  width: 150px;
-  height: 150px;
-  margin: 10px;
-  background-color: darkred;
-  justify-content: center;
+const StyledLiveStreaming = styled.View`
   align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  flex-direction: row;
 `;
 
-const StyledTextBox = styled.Text`
-  font-weight: bold;
-  color: white;
-  margin: 10px;
+const StyledLogo = styled.Image`
+  height: 150px;
+  width: 150px;
+  border-width: 1px;
+  border-radius: 2px;
+  border-color: #ddd;
+  border-bottom-width: 0;
+  shadow-color: #000;
+  shadow-opacity: 0.8;
+  shadow-radius: 2;
 `;
 
 export default HeroBox;

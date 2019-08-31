@@ -7,9 +7,18 @@ import { View } from "react-native";
 // receive GQL from server
 const SurveyBox: React.FC = () => {
   return (
-    <View style={{marginBottom: 10}}>
-      <Text style={{margin: 20, marginBottom: 0}} h4 h4Style={{fontWeight: "bold"}}>Quizzes</Text>
-      <ScrollView style={{ marginHorizontal: 10 }} horizontal={true} showsHorizontalScrollIndicator={false}>
+    <View style={{ marginBottom: 10 }}>
+      <StyledView>
+        <Text h4 h4Style={{ fontWeight: "bold" }}>
+          Quizzes
+        </Text>
+      </StyledView>
+
+      <ScrollView
+        style={{ marginHorizontal: 10 }}
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+      >
         <StyledBox>
           <StyledTextBox>Quiz #1</StyledTextBox>
         </StyledBox>
@@ -26,6 +35,10 @@ const SurveyBox: React.FC = () => {
     </View>
   );
 };
+
+export const StyledView = styled.View`
+  margin: 20px 20px 0;
+`;
 
 const StyledBox = styled.View`
   width: 150px;

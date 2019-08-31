@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-const Podcast = () => {
+const Podcast: React.FC = () => {
   return (
     <View>
       <Text>Podcast screen</Text>

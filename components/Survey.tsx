@@ -9,13 +9,17 @@ const SurveyBox: React.FC = () => {
   return (
     <View style={{ marginBottom: 10 }}>
       <StyledView>
-        <Text h4 h4Style={{ fontWeight: "bold" }}>
-          Quizzes
+        <Text style={{fontWeight: 'bold', paddingBottom: 5, fontSize: 20}}>
+          RPD Kuis
+        </Text>
+        <Text style={{ paddingVertical: 5 }}>
+          Tebak kuisnya dan menangkan hadiah dari berbagai SS & SK Radio PPI
+          Dunia
         </Text>
       </StyledView>
 
       <ScrollView
-        style={{ marginHorizontal: 10 }}
+        style={{marginHorizontal: 15}}
         horizontal={true}
         showsHorizontalScrollIndicator={false}
       >
@@ -37,19 +41,20 @@ const SurveyBox: React.FC = () => {
 };
 
 export const StyledView = styled.View`
-  margin: 20px 20px 0;
+  padding: 20px 20px 0;
 `;
 
-const StyledBox = styled.View`
+export const StyledBox = styled.View`
   width: 150px;
   height: 150px;
-  margin: 10px;
+  margin: 10px 5px;
   background-color: darkred;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 `;
 
-const StyledTextBox = styled.Text`
+export const StyledTextBox = styled.Text`
   font-weight: bold;
   color: white;
   margin: 10px;

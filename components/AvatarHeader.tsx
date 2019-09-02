@@ -5,7 +5,7 @@ import { Avatar } from "react-native-elements";
 const AvatarHeader = () => {
   return (
     <View style={{ marginRight: 20 }}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => console.log('Profile page clicked')}>
         <Avatar rounded title="IP" />
       </TouchableOpacity>
     </View>

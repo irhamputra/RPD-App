@@ -1,9 +1,10 @@
 import React from "react";
+import { TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-elements";
 import styled from "styled-components";
+import { MaterialIcons } from "@expo/vector-icons";
 
 import { StyledView } from "./Survey";
-import { View } from "react-native";
 
 const HeroBox: React.FC = () => {
   return (
@@ -21,8 +22,45 @@ const HeroBox: React.FC = () => {
           }}
         />
         <View style={{ width: 200 }}>
-          <Text>Now Airing:</Text>
-          <Text>SSK Raka & SK Abul - Malaysia | Unit Galau Darurat</Text>
+          <View>
+            <Text style={{ fontWeight: "bold" }}>Now Airing:</Text>
+            <Text>SSK Raka & SK Abul - Malaysia | Unit Galau Darurat</Text>
+          </View>
+
+          <View style={{ flexDirection: "row" }}>
+            <View>
+              <TouchableOpacity
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  backgroundColor: "black",
+                  borderRadius: 2,
+                  width: "100%",
+                  marginTop: 10
+                }}
+                onPress={() => console.log("Play clicked")}
+              >
+                <MaterialIcons name="play-arrow" size={25} color="white" />
+                <Text style={{ color: "white", marginRight: 8 }}>Play</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View>
+              <TouchableOpacity
+                style={{
+                  flexDirection: "row",
+                  alignItems: "center",
+                  borderRadius: 2,
+                  width: "100%",
+                  marginTop: 10
+                }}
+                onPress={() => console.log("Stop clicked")}
+              >
+                <MaterialIcons name="stop" size={25} color="red" />
+                <Text style={{ color: "red" }}>Stop</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
       </StyledLiveStreaming>
     </View>

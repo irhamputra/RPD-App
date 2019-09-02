@@ -14,8 +14,9 @@ const Home: React.FC = () => {
         <HeroBox />
         <Divider style={{height: 10, backgroundColor: '#EFEFEF'}} />
         <SurveyBox />
-        <Divider/>
+        <Divider style={{ marginHorizontal: 20}}/>
         <NewsCard/>
+        <SurveyBox />
       </ScrollView>
     </StyledScrollView>
   );

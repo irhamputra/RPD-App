@@ -1,11 +1,17 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { Text } from "react-native-elements";
+import { ScrollView } from "react-native";
+import { StyledView } from "../components/Survey";
 
 const Podcast: React.FC = () => {
   return (
-    <View>
-      <Text>Podcast screen</Text>
-    </View>
+    <ScrollView>
+      <StyledView>
+        <Text h4 h4Style={{ fontWeight: "bold" }}>
+          Podcast
+        </Text>
+      </StyledView>
+    </ScrollView>
   );
 };
 
